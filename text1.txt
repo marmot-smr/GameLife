@@ -1,0 +1,59 @@
+input_counter = 1
+m_dublikate = new_matrix_p1
+i = -1
+m_w = 150
+m_h = 150
+point_score = 0
+
+if input_counter == 1:
+	if (m_w>50) and (m_h>50):	
+		for j in m_dublikate:
+			i += 1
+			a = -1
+			for elements in j:
+				a += 1
+				
+				if  input_counter == 1:
+					point_score = 0
+					if m_dublikate[a%m_w][i%m_h] == 1:
+						point_score += 1
+					if m_dublikate[(a+1) % m_w][(i) % m_h] == 1:
+						point_score += 1
+					if m_dublikate[(a+2)%m_w][i%m_h] == 1:
+						point_score += 1
+					if m_dublikate[(a+1)%m_w][(i+1)%m_h] == 1:
+						point_score += 1		
+					if (m_dublikate[(a)%m_w][(i+1)%m_h] == 0) and (m_dublikate[(a+2)%m_w][(i+1)%m_h] == 0) and (m_dublikate[(a+1)%m_w][(i-1)%m_h] == 0) and (m_dublikate[(a+1)%m_w][(i+2)%m_h] == 0) and (m_dublikate[(a)%m_w][(i-1)%m_h] == 0) and (m_dublikate[(a+2)%m_w][(i-1)%m_h] == 0) and input_counter == 1:
+						point_score += 2
+					if point_score == 5:
+						if generation_counter1 > generation1:
+							if m_dublikate[a%m_w][i%m_h] == 0:
+								m_dublikate[a%m_w][i%m_h] = 1
+	
+						
+							
+								
+							if m_dublikate[(a+1) % m_w][(i) % m_h] == 0:
+								m_dublikate[(a+1) % m_w][(i) % m_h] =1
+		
+						
+						
+								
+							if m_dublikate[(a+2)%m_w][i%m_h] == 0:
+								
+	
+								m_dublikate[(a+2)%m_w][i%m_h] = 1
+									
+								
+							
+							if m_dublikate[(a+1)%m_w][(i+1)%m_h] == 0:
+								
+	
+								m_dublikate[(a+1)%m_w][(i+1)%m_h]=1
+							
+								
+							input_counter -= 1
+								
+	
+	else:
+new_matrix_p1 = m_dublikate	
